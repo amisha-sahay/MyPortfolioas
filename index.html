@@ -6,28 +6,34 @@
     <title>Amisha Sahay | MSc Geoinformatics</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Background video styling */
-        #bg-video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
+        /* Scopes background video strictly to the hero section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
             min-width: 100%;
             min-height: 100%;
             width: auto;
             height: auto;
-            z-index: -100;
+            z-index: 1;
+            transform: translate(-50%, -50%);
             object-fit: cover;
             pointer-events: none;
+        }
+
+        /* Brings content above the video */
+        .hero-text, .hero-image {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
 <body>
-
-<!-- CONTINUOUS BACKGROUND VIDEO -->
-<video autoplay loop muted playsinline id="bg-video">
-    <source src="background.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
 
 <header>
     <nav class="navbar">
@@ -47,6 +53,12 @@
 </header>
 
 <section id="home" class="hero">
+    <!-- BACKGROUND VIDEO FOR HOME SECTION ONLY -->
+    <video autoplay loop muted playsinline class="hero-bg-video">
+        <source src="background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <div class="hero-text">
         <p class="small-heading">WELCOME TO MY PORTFOLIO</p>
         <h1>Hi, I'm <span>Amisha Sahay</span></h1>
