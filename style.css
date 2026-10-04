@@ -14,20 +14,40 @@ html { scroll-behavior: smooth; }
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
+/* Base Body Styles */
 body {
   font-family: Times New Roman, Helvetica, sans-serif;
   line-height: 1.6;
-  background: var(--main-bg);
+  background-color: var(--main-bg);
   color: var(--text-color);
 }
 
-body.dark-mode {
-    background: #121816;
-    color: #eeeeee;
-    --light: #1b2421;
-    --dark: #eeeeee;
+/* Headings & Accent Text */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
 }
 
+a {
+  color: var(--primary-accent);
+}
+
+/* Cards & Containers */
+.card, 
+.hero, 
+.hero-image, 
+section {
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+/* Buttons */
+.btn, 
+button {
+  background-color: var(--primary-accent);
+  color: #ffffff;
+  border: none;
+}
+ 
 body.dark-mode .project-card,
 body.dark-mode .skill-card,
 body.dark-mode .fact-card,
