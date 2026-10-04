@@ -7,12 +7,12 @@
 html { scroll-behavior: smooth; }
 
 :root {
-    --primary: #176b5b;
-    --accent: ##F5F5F5;
-    --dark: #F5F5F5;
-    --light: #f4f8f6;
-    --white: #ffffff;
-    --grey: #666666;
+    Main background: #F1F0E8;
+    Card background: #FAF9F4;
+    Contour-line accent: #C8C5B5;
+    Primary accent: #667A63;
+    Secondary accent: #B27A52;
+    Text: #29332D;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
