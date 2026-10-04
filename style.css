@@ -321,7 +321,22 @@ header {
         var(--transition);
 }
 
-
+/* BACKGROUND VIDEO FIX */
+    position: relative;
+    z-index: 1;
+.hero-bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    pointer-events: none;
+}
 #theme-toggle:hover {
 
     background:
@@ -540,27 +555,14 @@ header {
 
     -webkit-text-fill-color: transparent;
 
-    background-clip: text;
+.hero-image img {
+    width: 310px;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #DDE5D6;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
-
-
-/* SUBTITLE */
-
-.hero h2 {
-
-    display: inline-block;
-
-    font-size: 21px;
-
-    font-weight: normal;
-
-    color:
-        rgba(255,255,255,0.82);
-
-    padding-left: 18px;
-
-    border-left:
-        3px solid
         var(--teal-light);
 
     margin-bottom: 25px;
