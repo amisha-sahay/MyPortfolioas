@@ -136,3 +136,25 @@ section {
   object-fit: cover;          /* Keeps photo proportional without distortion */
   border-radius: 50%;         /* Clips the image itself into a circle */
 }
+/* Contact Section Text & Button Color Fix */
+#contact, 
+.contact-section {
+  color: var(--text-dark); /* Uses dark green #26332A */
+}
+
+/* Subheadings and small section labels */
+#contact h3, 
+#contact p, 
+#contact .subtitle, 
+.contact-section p {
+  color: #3D4F42; /* Slightly softer dark green for paragraphs/subtitles */
+}
+
+/* Contact Buttons Text & Icons */
+#contact .btn, 
+.contact-section a, 
+.contact-section button {
+  color: var(--text-dark);
+  border: 1px solid var(--primary-accent);
+  background-color: var(--card-bg);
+}
