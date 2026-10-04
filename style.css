@@ -7,13 +7,14 @@
 html { scroll-behavior: smooth; }
 
 :root {
-    Main background: #F1F0E8;
-    Card background: #FAF9F4;
-    Contour-line accent: #C8C5B5;
-    Primary accent: #667A63;
-    Secondary accent: #B27A52;
-    Text: #29332D;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  
+  --main-bg: #F1F0E8;        /* Main background */
+  --card-bg: #FAF9F4;        /* Card background */
+  --contour-accent: #C8C5B5; /* Contour-line accent */
+  --primary-accent: #667A63; /* Primary accent */
+  --secondary-accent: #B27A52; /* Secondary accent */
+  --text-color: #29332D;      /* Text color */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 body {
