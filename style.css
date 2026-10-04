@@ -158,3 +158,19 @@ section {
   border: 1px solid var(--primary-accent);
   background-color: var(--card-bg);
 }
+/* Force all section subtitles, paragraphs, and card links to use dark text */
+section p, 
+section h4, 
+section span, 
+.card p, 
+.card a {
+  color: #26332A !important; /* Dark green color from your palette */
+}
+
+/* Contact button cards specific fix */
+section a.btn, 
+.card a, 
+button {
+  color: #26332A !important;
+  border: 1px solid #6B8068;
+}
