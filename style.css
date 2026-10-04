@@ -7,21 +7,18 @@
 html { scroll-behavior: smooth; }
 
 :root {
-  
-  --main-bg: #F1F0E8;        /* Main background */
-  --card-bg: #FAF9F4;        /* Card background */
-  --contour-accent: #C8C5B5; /* Contour-line accent */
-  --primary-accent: #667A63; /* Primary accent */
-  --secondary-accent: #B27A52; /* Secondary accent */
-  --text-color: #29332D;      /* Text color */
+  --main-bg: #F3F5F0;        /* Background */
+  --card-bg: #DDE5D6;        /* Secondary */
+  --primary-accent: #6B8068; /* Accent */
+  --text-color: #26332A;      /* Dark text */
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 body {
-    font-family: Times New Roman, Helvetica, sans-serif;
-    line-height: 1.6;
-    background: #ffffff;
-    color: #222222;
+  font-family: Times New Roman, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: var(--main-bg);
+  color: var(--text-color);
 }
 
 body.dark-mode {
