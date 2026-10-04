@@ -1,17 +1,17 @@
 /* ==========================================
-   1. ROOT VARIABLES & COLOR PALETTE
+   1. COLOR PALETTE & ROOT VARIABLES
    ========================================== */
 :root {
-  --main-bg: #F3F5F0;        /* Main background */
-  --card-bg: #DDE5D6;        /* Secondary / Card background */
-  --primary-accent: #6B8068; /* Primary accent / Links */
-  --text-dark: #26332A;      /* Dark text for light sections */
+  --main-bg: #F3F5F0;        /* Main page background */
+  --card-bg: #DDE5D6;        /* Section / Card background */
+  --primary-accent: #6B8068; /* Accent green */
+  --text-dark: #26332A;      /* Standard dark text */
   --text-light: #F3F5F0;     /* Light text for hero section */
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* ==========================================
-   2. BASE BODY & GLOBAL STYLES
+   2. GLOBAL BODY & PAGE STYLES
    ========================================== */
 html {
   scroll-behavior: smooth;
@@ -26,7 +26,7 @@ body {
   padding: 0;
 }
 
-/* Base Headings & Links for Light Sections */
+/* Headings & Links */
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-dark);
 }
@@ -36,17 +36,22 @@ a {
   text-decoration: none;
 }
 
-/* Cards & Content Containers */
-.card, 
+/* General Sections */
 section {
+  padding: 60px 10%;
+}
+
+/* Cards & Content Containers */
+.card {
   background-color: var(--card-bg);
   box-shadow: var(--shadow);
-  padding: 20px;
-  border-radius: 8px;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 20px 0;
 }
 
 /* ==========================================
-   3. HERO SECTION & VIDEO BACKGROUND
+   3. HERO SECTION (SPACE BACKGROUND & CIRCULAR PROFILE)
    ========================================== */
 .hero {
   position: relative;
@@ -57,10 +62,11 @@ section {
   align-items: center;
   justify-content: space-around;
   padding: 0 5%;
-  box-sizing: border-border;
+  box-sizing: border-box;
+  color: var(--text-light);
 }
 
-/* Video positioned behind content */
+/* Video positioned strictly behind content */
 .hero-bg-video {
   position: absolute;
   top: 50%;
@@ -75,29 +81,23 @@ section {
   pointer-events: none;
 }
 
-/* Ensures content sits above the video */
+/* Content layer above video */
 .hero-text, 
 .hero-image {
   position: relative;
   z-index: 2;
 }
 
-/* ==========================================
-   4. HERO TEXT & HEADINGS LEGIBILITY
-   ========================================== */
-.hero {
-  color: var(--text-light);
-}
-
+/* Hero Typography */
 .hero h1 {
-  color: #FFFFFF;             /* Pure white for name "Amisha Sahay" */
+  color: #FFFFFF;
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero h2 {
-  color: #D3E0CA;             /* Sage-cream for "MSc Geoinformatics Student" */
+  color: #D3E0CA;
   font-size: 1.8rem;
   font-weight: normal;
   margin-top: 0;
@@ -105,65 +105,56 @@ section {
 
 .hero p, 
 .hero .subtitle {
-  color: #DDE5D6;             /* Soft sage for description text */
+  color: #DDE5D6;
   max-width: 500px;
 }
 
-.hero a, 
-.hero .btn {
-  color: #A3B899;             /* Accent color for buttons/links in hero */
-}
-
-/* ==========================================
-   5. CIRCULAR PROFILE PHOTO & BORDER
-   ========================================== */
+/* Circular Profile Photo Frame */
 .hero-image {
   width: 280px;
   height: 280px;
-  border-radius: 50%;         /* Makes the outer wrapper a circle */
+  border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent; /* Removes square background */
-  border: 6px solid #DDE5D6;  /* Circular border around profile photo */
+  background-color: transparent;
+  border: 6px solid #DDE5D6;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;          /* Keeps photo proportional without distortion */
-  border-radius: 50%;         /* Clips the image itself into a circle */
+  object-fit: cover;
+  border-radius: 50%;
 }
-/* Contact Section Text & Button Color Fix */
+
+/* ==========================================
+   4. CONTACT ME SECTION (DARK TEXT FIX)
+   ========================================== */
 #contact, 
 .contact-section {
-  color: var(--text-dark); /* Uses dark green #26332A */
+  text-align: center;
 }
 
-/* Subheadings and small section labels */
-#contact h3, 
-#contact p, 
-#contact .subtitle, 
-.contact-section p {
-  color: #3D4F42; /* Slightly softer dark green for paragraphs/subtitles */
+/* Forces all headings, text, and subtext in contact section to be dark green */
+#contact *, 
+.contact-section * {
+  color: #26332A !important;
 }
 
-/* Contact Buttons Text & Icons */
+/* Contact Button Links */
+#contact a, 
 #contact .btn, 
-.contact-section a, 
-.contact-section button {
-  color: var(--text-dark);
-  border: 1px solid var(--primary-accent);
-  background-color: var(--card-bg);
+.contact-section a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 8px;
+  background-color: #FAF9F4 !important;
+  color: #26332A !important;
+  border: 1px solid #6B8068 !important;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-/* Force all section subtitles, paragraphs, and card links to use dark text */
-section p, 
-section h4, 
-section span, 
-.card p, 
-.card a {
-  color: #26332A !important; /* Dark green color from your palette */
-}
-
