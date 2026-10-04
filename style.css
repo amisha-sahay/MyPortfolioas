@@ -167,24 +167,3 @@ section span,
   color: #26332A !important; /* Dark green color from your palette */
 }
 
-/* Contact button cards specific fix */
-section a.btn, 
-.card a, 
-button {
-  color: #26332A !important;
-  border: 1px solid #6B8068;
-}
-/* Force dark text inside the contact section */
-#contact,
-#contact * {
-  color: #26332A !important;
-}
-
-/* Fix button outlines and text */
-#contact a,
-#contact button,
-#contact .btn {
-  color: #26332A !important;
-  border: 1px solid #6B8068 !important;
-  background-color: #DDE5D6 !important;
-}
