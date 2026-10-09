@@ -1,215 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amisha Sahay | MSc Geoinformatics</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amisha Sahay | MSc Geoinformatics</title>
+  
+  <style>
+    /* Color Palette Variables */
+    :root {
+      --sage-green: #8A9A86;
+      --dark-sage: #556B2F;
+      --cream-bg: #FDFBF7;
+      --cream-card: #F4F1EA;
+      --text-dark: #2C3E35;
+      --nav-bg: rgba(44, 62, 53, 0.85);
+    }
+
+    /* Global Resets */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--cream-bg);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Background Video Container */
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Sage Green / Cream Overlay */
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        135deg, 
+        rgba(138, 154, 134, 0.45), 
+        rgba(253, 251, 247, 0.65)
+      );
+      backdrop-filter: blur(3px);
+    }
+
+    /* Centered Navigation Bar */
+    .navbar-container {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1100px;
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--nav-bg);
+      padding: 10px 24px;
+      border-radius: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo {
+      background-color: var(--sage-green);
+      color: #ffffff;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 50%;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: #E8ECE9;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--sage-green);
+    }
+
+    /* Hero & Profile Section */
+    .hero-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 80px;
+    }
+
+    .profile-card {
+      text-align: center;
+      background: rgba(244, 241, 234, 0.85);
+      padding: 35px 45px;
+      border-radius: 24px;
+      border: 1px solid rgba(138, 154, 134, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .profile-img-wrapper {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 16px auto;
+      border-radius: 50%;
+      border: 4px solid var(--sage-green);
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .subtitle {
+      color: var(--dark-sage);
+      font-weight: 600;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
-    
 <body>
-<header>
-    <nav class="navbar">
-        <div class="logo">AS</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#academic">Academic Work</a></li>
-            <li><a href="#dashboards">Maps</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-  <section id="home" class="hero">
-    <!-- BACKGROUND VIDEO FOR HOME SECTION ONLY -->
-    <video autoplay loop muted playsinline class="hero-bg-video">
-        <source src="background.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+
+  <!-- Background Video Element -->
+  <div class="video-background">
+    <video autoplay loop muted playsinline id="bg-video">
+      <source src="background-video.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
     </video>
+    <div class="video-overlay"></div>
+  </div>
 
-    <div class="hero-text">
-        <p class="small-heading">WELCOME TO MY PORTFOLIO</p>
-        <h1> <span>Amisha Sahay</span></h1>
-        <h2>MSc Geoinformatics Student</h2>
-        <p>Exploring GIS, Remote Sensing, Cartography and Spatial Analysis through maps, data and technology.</p>
-        <div class="hero-buttons">
-            <a href="#projects" class="btn">View Projects</a>
-            <a href="#contact" class="btn secondary-btn">Contact Me</a>
-        </div>
-    </div>
-    <div class="hero-image">
-        <img src="assets/images/profile.JPG" alt="Portrait of Amisha Sahay">
-    </div>
-</section>
-        </div>
-    </div>
-    <div class="hero-image">
-        <img src="assets/images/profile.JPG" alt="Portrait of Amisha Sahay">
-    </div>
-</section>
+  <!-- Navigation Bar -->
+  <header class="navbar-container">
+    <nav class="navbar">
+      <div class="logo">AS</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#academic">Academic Work</a></li>
+        <li><a href="#maps">Maps</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section id="about" class="section">
-    <div class="section-heading">
-        <p>GET TO KNOW ME</p>
-        <h2>About Me</h2>
+  <!-- Main Hero Section -->
+  <main class="hero-section" id="home">
+    <div class="profile-card">
+      <div class="profile-img-wrapper">
+        <img src="profile.jpg" alt="Amisha Sahay" class="profile-img" />
+      </div>
+      <p class="subtitle">GIS • RS • CARTOGRAPHY</p>
     </div>
-    <div class="about-container">
-        <div class="about-text">
-            <p>I am a Semester 1 MSc Geoinformatics student interested in understanding the world through spatial data, maps and geographic technologies.</p>
-            <p>My academic interests include Geographic Information Systems, Remote Sensing, Cartography, Spatial Analysis and Environmental Applications of Geoinformatics.</p>
-            <p>Through academic projects and practical work, I am developing skills in GIS software, satellite data analysis, map design and geospatial programming.</p>
-        </div>
-        <div class="quick-facts">
-            <div class="fact-card"><h3>Programme</h3><p>MSc Geoinformatics</p></div>
-            <div class="fact-card"><h3>Interests</h3><p>GIS & Remote Sensing</p></div>
-            <div class="fact-card"><h3>Focus</h3><p>Spatial Analysis</p></div>
-        </div>
-    </div>
-</section>
+  </main>
 
-<section id="skills" class="section alternate-section">
-    <div class="section-heading">
-        <p>WHAT I WORK WITH</p>
-        <h2>Skills</h2>
-    </div>
-    <div class="cards-grid">
-        <div class="skill-card"><div class="skill-icon">🌍</div><h3>GIS</h3><p>Geographic Information Systems</p></div>
-        <div class="skill-card"><div class="skill-icon">🛰️</div><h3>Remote Sensing</h3><p>Satellite image interpretation and analysis</p></div>
-        <div class="skill-card"><div class="skill-icon">🗺️</div><h3>Cartography</h3><p>Map design and spatial visualization</p></div>
-        <div class="skill-card"><div class="skill-icon">📊</div><h3>Spatial Analysis</h3><p>Analysis of geographic and environmental data</p></div>
-        <div class="skill-card"><div class="skill-icon">💻</div><h3>ArcGIS Pro</h3><p>GIS analysis and map production</p></div>
-        <div class="skill-card"><div class="skill-icon">🟢</div><h3>QGIS</h3><p>Open-source GIS workflows</p></div>
-        <div class="skill-card"><div class="skill-icon">🐍</div><h3>Python</h3><p>Basic geospatial programming</p></div>
-        <div class="skill-card"><div class="skill-icon">🌐</div><h3>HTML & CSS</h3><p>Basic web development</p></div>
-    </div>
-</section>
-
-<section id="projects" class="section">
-    <div class="section-heading">
-        <p>MY WORK</p>
-        <h2>Projects</h2>
-    </div>
-    <div class="projects-grid">
-        <article class="project-card">
-            <img src="assets/images/project-01.png" alt="Project 1 preview">
-            <div class="project-content">
-                <p class="project-category">GIS / Remote Sensing</p>
-                <h3>Project Title 01</h3>
-                <p>A short description of the project, explaining the problem, data used, methodology and result.</p>
-                <p class="tools"><strong>Tools:</strong> ArcGIS Pro, Remote Sensing</p>
-                <a href="#" class="project-link">View Project →</a>
-            </div>
-        </article>
-        <article class="project-card">
-            <img src="assets/images/project-02.png" alt="Project 2 preview">
-            <div class="project-content">
-                <p class="project-category">Cartography</p>
-                <h3>Project Title 02</h3>
-                <p>Add a short explanation of what you investigated and what you produced.</p>
-                <p class="tools"><strong>Tools:</strong> QGIS, Cartography</p>
-                <a href="#" class="project-link">View Project →</a>
-            </div>
-        </article>
-        <article class="project-card">
-            <img src="assets/images/project-03.png" alt="Project 3 preview">
-            <div class="project-content">
-                <p class="project-category">StoryMap</p>
-                <h3>Project Title 03</h3>
-                <p>Add a short description of your StoryMap or geospatial project.</p>
-                <p class="tools"><strong>Tools:</strong> ArcGIS StoryMaps</p>
-                <a href="#" class="project-link">View Project →</a>
-            </div>
-        </article>
-        <article class="project-card">
-            <img src="assets/images/project-04.png" alt="Project 4 preview">
-            <div class="project-content">
-                <p class="project-category">Spatial Analysis</p>
-                <h3>Project Title 04</h3>
-                <p>Add your project description here.</p>
-                <p class="tools"><strong>Tools:</strong> ArcGIS Pro, Python</p>
-                <a href="#" class="project-link">View Project →</a>
-            </div>
-        </article>
-    </div>
-</section>
-
-<section id="academic" class="section alternate-section">
-    <div class="section-heading">
-        <p>MSC GEOINFORMATICS</p>
-        <h2>Academic Work</h2>
-    </div>
-    <div class="academic-grid">
-        <div class="academic-card"><h3>GIS Practicals</h3><p>Selected GIS exercises involving spatial analysis, data management and cartographic visualization.</p><a href="#">View Work →</a></div>
-        <div class="academic-card"><h3>Remote Sensing</h3><p>Satellite image analysis including vegetation and water indices.</p><a href="#">View Work →</a></div>
-        <div class="academic-card"><h3>Cartography</h3><p>Maps created as part of academic coursework and practical assignments.</p><a href="#">View Maps →</a></div>
-    </div>
-</section>
-
-<section id="dashboards" class="section">
-    <div class="section-heading">
-        <p>INTERACTIVE WORK</p>
-        <h2>Maps & Dashboards</h2>
-    </div>
-    <div class="map-container">
-        <iframe 
-            src="https://arcg.is/05n1av3" 
-            width="100%" 
-            height="600px" 
-            style="border: none; border-radius: 8px;"
-            title="ArcGIS Interactive Map">
-        </iframe>
-    </div>
-</section>
-
-<section id="education" class="section alternate-section">
-    <div class="section-heading">
-        <p>MY ACADEMIC JOURNEY</p>
-        <h2>Education</h2>
-    </div>
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content"><span>2026 – Present</span><h3>MSc Geoinformatics</h3><p>Bharati Vidyapeeth Institute Environment Education and Research</p></div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content"><span>2020-2023</span><h3>BA Geography (Hons)</h3><p>St. Xavier's College</p></div>
-        </div>
-    </div>
-</section>
-
-<section id="certifications" class="section">
-    <div class="section-heading">
-        <p>LEARNING & DEVELOPMENT</p>
-        <h2>Certifications</h2>
-    </div>
-    <div class="certification-grid">
-        <div class="certificate-card"><div class="certificate-icon">🏆</div><h3>Certificate Name</h3><p>Issuing Organization</p><a href="#">View Certificate →</a></div>
-        <div class="certificate-card"><div class="certificate-icon">📜</div><h3>Certificate Name</h3><p>Issuing Organization</p><a href="#">View Certificate →</a></div>
-    </div>
-</section>
-
-<section id="contact" class="contact-section">
-    <div class="section-heading">
-        <p>GET IN TOUCH</p>
-        <h2>Contact Me</h2>
-        <p>Feel free to connect with me regarding geospatial projects, academic work or collaboration.</p>
-    </div>
-    <div class="contact-links">
-        <a href="mailto:your-email@example.com">📧 Email</a>
-        <a href="https://github.com/yourusername" target="_blank">💻 GitHub</a>
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank">🔗 LinkedIn</a>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Amisha Sahay | MSc Geoinformatics</p>
-    <p>Built with HTML, CSS & JavaScript</p>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
+
+      
 
