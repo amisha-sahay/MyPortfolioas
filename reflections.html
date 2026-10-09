@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecosystem Studies | Amisha Sahay</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Specific styles for Ecosystem Infographics & Interactive Cards */
+    .infographic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
 
+    .info-card {
+      background: var(--cream-accent);
+      border: 1px solid var(--sage-green);
+      border-radius: 12px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .info-icon {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .pyramid-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin: 20px 0;
+    }
+
+    .pyramid-level {
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .level-apex { width: 40%; background-color: #3b503e; }
+    .level-mid { width: 65%; background-color: #5c755e; }
+    .level-base { width: 90%; background-color: #8A9A86; }
+
+    .sdg-badge {
+      display: inline-block;
+      background: #56C02B;
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fullscreen Background Video -->
+  <div class="video-background">
+    <video autoplay loop muted playsinline id="bg-video">
+      <source src="background.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="video-overlay"></div>
+  </div>
+
+  <!-- Floating Navigation Bar -->
+  <header class="navbar-container">
+    <nav class="navbar">
+      <div class="logo">AS</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#concepts">Concepts</a></li>
+        <li><a href="#fieldwork">Field Work</a></li>
+        <li><a href="#services">Valuation</a></li>
+        <li><a href="#gaming">Game-Based</a></li>
+        <li><a href="#sdg">SDG 15</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="profile-card">
+      <h1 class="profile-name">Ecosystem Studies</h1>
+      <p class="profile-title">EST 1101 Portfolio Reflections</p>
+      <p class="subtitle">ECOLOGY • VALUATION • BIOGEOGRAPHY</p>
+    </div>
+  </section>
+
+  <!-- Section 1: Conceptual Understanding & Infographics -->
+  <section class="content-section" id="concepts">
+    <div class="section-card">
+      <h2>1. Conceptual Understanding & Dynamics</h2>
+      <p>Exploring the structure-function relationships in ecosystems, trophic energy transfer, and biogeochemical cycling.</p>
+      
+      <h3 style="margin-top:20px; color:var(--dark-sage);">Infographic: Trophic Energy Flow</h3>
+      <div class="pyramid-container">
+        <div class="pyramid-level level-apex">Tertiary Consumers (10 J)</div>
+        <div class="pyramid-level level-mid">Secondary Consumers (100 J)</div>
+        <div class="pyramid-level level-mid" style="width: 80%; background: #718870;">Primary Consumers (1,000 J)</div>
+        <div class="pyramid-level level-base">Primary Producers (10,000 J)</div>
+      </div>
+
+      <p style="font-size: 0.9rem; text-align: center; color: var(--dark-sage);"><em>Figure: 10% Energy Transfer Efficiency across Trophic Levels in Terrestrial Ecosystems.</em></p>
+    </div>
+  </section>
+
+  <!-- Section 2: Fieldwork & Analytical Work -->
+  <section class="content-section" id="fieldwork">
+    <div class="section-card">
+      <h2>2. Field Work & Data Analysis</h2>
+      <p>Integrating <strong>Practicum Field Techniques I</strong> with spatial and statistical analysis to observe real-world ecosystem conditions.</p>
+
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>Fieldwork Observations</h3>
+          <p>Applied species richness and diversity indices across environmental gradients during local habitat sampling.</p>
+        </div>
+        <div class="grid-item">
+          <h3>Cross-Disciplinary GIS Integration</h3>
+          <p>Combined Remote Sensing datasets with ecotone boundary detection to observe edge effects and habitat fragmentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Ecosystem Services & Valuation -->
+  <section class="content-section" id="services">
+    <div class="section-card">
+      <h2>3. Ecosystem Services & Economic Valuation</h2>
+      <p>Understanding natural capital valuation using frameworks like the <strong>Millennium Ecosystem Assessment (MEA)</strong> and <strong>TEEB</strong>.</p>
+      
+      <div class="infographic-grid">
+        <div class="info-card">
+          <div class="info-icon">🍎</div>
+          <strong>Provisioning</strong>
+          <p style="font-size:0.85rem; margin-top:5px;">Food, fresh water, fuel wood, and biochemical assets.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🐝</div>
+          <strong>Regulating</strong>
+          <p style="font-size:0.85rem; margin-top:5px;">Climate regulation, flood attenuation, and pollination.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🌱</div>
+          <strong>Supporting</strong>
+          <p style="font-size:0.85rem; margin-top:5px;">Nutrient cycling, primary production, and soil formation.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🏞️</div>
+          <strong>Cultural</strong>
+          <p style="font-size:0.85rem; margin-top:5px;">Recreation, aesthetic value, and spiritual enrichment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Game-Based Learning Reflection -->
+  <section class="content-section" id="gaming">
+    <div class="section-card">
+      <h2>4. Game-Based Learning Reflection</h2>
+      <p>Reflecting on ecosystem dynamics, evolutionary biology, and biogeography through interactive simulations and gaming tools.</p>
+      
+      <div style="background: var(--cream-accent); padding: 15px; border-radius: 10px; border-left: 4px solid var(--sage-green); margin-top: 15px;">
+        <p><strong>Simulation / Tool:</strong> Ecological Niche Modeling Simulator / Evolution Game</p>
+        <p><strong>Grasped Concepts:</strong> Natural selection drivers, carrying capacity limits, and species dispersion along climatic gradients.</p>
+        <p><strong>Key Insight:</strong> Interactive simulations vividly illustrated non-linear feedback loops in predator-prey dynamics that static equations could not fully convey.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: SDG 15 Alignment -->
+  <section class="content-section" id="sdg">
+    <div class="section-card">
+      <div class="sdg-badge">SDG 15: Life on Land</div>
+      <h2>5. Alignment with Sustainable Development Goals</h2>
+      <p>Linking academic ecosystem learning directly to international biodiversity and conservation targets.</p>
+      
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>Target 15.1</h3>
+          <p>Conserving freshwater and terrestrial ecosystems through spatial monitoring and sustainable land-use practices.</p>
+        </div>
+        <div class="grid-item">
+          <h3>Target 15.5</h3>
+          <p>Mitigating natural habitat degradation, arresting biodiversity loss, and protecting endangered endemic species.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="text-align: center; padding: 20px; color: var(--dark-sage);">
+    <p>© 2026 Amisha Sahay | MSc Geoinformatics (EST 1101 Ecosystem Studies)</p>
+  </footer>
+
+</body>
+</html>
