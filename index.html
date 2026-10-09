@@ -4,160 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Amisha Sahay | MSc Geoinformatics</title>
-  
-  <style>
-    /* Color Palette Variables */
-    :root {
-      --sage-green: #8A9A86;
-      --dark-sage: #556B2F;
-      --cream-bg: #FDFBF7;
-      --cream-card: #F4F1EA;
-      --text-dark: #2C3E35;
-      --nav-bg: rgba(44, 62, 53, 0.85);
-    }
-
-    /* Global Resets */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Times New Roman, Geneva, Verdana, sans-serif;
-      background-color: var(--cream-bg);
-      color: var(--text-dark);
-      overflow-x: hidden;
-      min-height: 100vh;
-    }
-
-    /* Background Video Container */
-    .video-background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    #bg-video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    /* Sage Green / Cream Overlay */
-    .video-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(
-        135deg, 
-        rgba(138, 154, 134, 0.45), 
-        rgba(253, 251, 247, 0.65)
-      );
-      backdrop-filter: blur(3px);
-    }
-
-    /* Centered Navigation Bar */
-    .navbar-container {
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 1100px;
-      z-index: 1000;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--nav-bg);
-      padding: 10px 24px;
-      border-radius: 40px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-      backdrop-filter: blur(10px);
-    }
-
-    .logo {
-      background-color: var(--sage-green);
-      color: #ffffff;
-      font-weight: bold;
-      padding: 8px 14px;
-      border-radius: 50%;
-      font-size: 1rem;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 18px;
-    }
-
-    .nav-links a {
-      color: #E8ECE9;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--sage-green);
-    }
-
-    /* Hero & Profile Section */
-    .hero-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding-top: 80px;
-    }
-
-    .profile-card {
-      text-align: center;
-      background: rgba(244, 241, 234, 0.85);
-      padding: 35px 45px;
-      border-radius: 24px;
-      border: 1px solid rgba(138, 154, 134, 0.3);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      backdrop-filter: blur(8px);
-    }
-
-    .profile-img-wrapper {
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 16px auto;
-      border-radius: 50%;
-      border: 4px solid var(--sage-green);
-      overflow: hidden;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-    }
-
-    .profile-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .subtitle {
-      color: var(--dark-sage);
-      font-weight: 600;
-      letter-spacing: 2px;
-      font-size: 0.85rem;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Background Video Element -->
+  <!-- Fullscreen Background Video -->
   <div class="video-background">
     <video autoplay loop muted playsinline id="bg-video">
       <source src="background-video.mp4" type="video/mp4" />
@@ -166,7 +17,7 @@
     <div class="video-overlay"></div>
   </div>
 
-  <!-- Navigation Bar -->
+  <!-- Floating Navigation Bar -->
   <header class="navbar-container">
     <nav class="navbar">
       <div class="logo">AS</div>
@@ -183,18 +34,95 @@
     </nav>
   </header>
 
-  <!-- Main Hero Section -->
-  <main class="hero-section" id="home">
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
     <div class="profile-card">
       <div class="profile-img-wrapper">
         <img src="profile.jpg" alt="Amisha Sahay" class="profile-img" />
       </div>
+      <h1 class="profile-name">Amisha Sahay</h1>
+      <p class="profile-title">MSc Geoinformatics</p>
       <p class="subtitle">GIS • RS • CARTOGRAPHY</p>
     </div>
-  </main>
+  </section>
+
+  <!-- About Section -->
+  <section class="content-section" id="about">
+    <div class="section-card">
+      <h2>About Me</h2>
+      <p>Welcome to my ePortfolio. I am an MSc Geoinformatics student specializing in Geographic Information Systems (GIS), Remote Sensing (RS), and Cartography. I focus on spatial data analysis, mapping solutions, and environmental visualization.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="content-section" id="skills">
+    <div class="section-card">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>ArcGIS Pro & QGIS</li>
+        <li>Remote Sensing & Satellite Imagery Processing</li>
+        <li>Spatial Analysis & Geoprocessing</li>
+        <li>Cartographic Design & Map Production</li>
+        <li>Python (ArcPy, PyGIS)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="content-section" id="projects">
+    <div class="section-card">
+      <h2>Projects</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>Urban Growth Analysis</h3>
+          <p>Analysis of land-use changes over time using multi-temporal satellite imagery.</p>
+        </div>
+        <div class="grid-item">
+          <h3>Buffer & Proximity Modeling</h3>
+          <p>Automated GIS scripts using Python and ArcPy to analyze proximity parameters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Work Section -->
+  <section class="content-section" id="academic">
+    <div class="section-card">
+      <h2>Academic Work</h2>
+      <p>Details regarding research papers, course assignments, and spatial laboratory reports.</p>
+    </div>
+  </section>
+
+  <!-- Maps Section -->
+  <section class="content-section" id="maps">
+    <div class="section-card">
+      <h2>Maps Gallery</h2>
+      <p>Collection of cartographic layouts, thematic maps, and topographic visualizations.</p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="content-section" id="education">
+    <div class="section-card">
+      <h2>Education</h2>
+      <p><strong>MSc in Geoinformatics</strong></p>
+      <p>Advanced coursework in spatial statistics, remote sensing technologies, and Python for GIS.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="content-section" id="contact">
+    <div class="section-card">
+      <h2>Contact</h2>
+      <p>Feel free to reach out for collaborations or inquiries.</p>
+      <p>Email: <a href="mailto:your-email@example.com" class="contact-link">your-email@example.com</a></p>
+    </div>
+  </section>
 
 </body>
 </html>
+
+  
 
       
 
