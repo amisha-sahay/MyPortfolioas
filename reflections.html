@@ -6,6 +6,33 @@
   <title>Ecosystem Studies Reflections | Amisha Sahay</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    /* Ecosystem Background Image Styling */
+    .image-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .image-background img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(253, 251, 247, 0.88); /* Cream tint for readability */
+      backdrop-filter: blur(4px);
+    }
+
     /* Ecosystem Infographics & Placeholder Styling */
     .infographic-grid {
       display: grid;
@@ -93,13 +120,10 @@
 </head>
 <body>
 
-  <!-- Fullscreen Background Video -->
-  <div class="video-background">
-    <video autoplay loop muted playsinline id="bg-video">
-      <source src="background.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="video-overlay"></div>
+  <!-- Ecosystem Diagram Background Image -->
+  <div class="image-background">
+    <img src="assets/images/est.jpg" alt="Ecosystem Background" />
+    <div class="image-overlay"></div>
   </div>
 
   <!-- Floating Navigation Bar -->
