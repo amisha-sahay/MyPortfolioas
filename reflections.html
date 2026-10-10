@@ -32,7 +32,12 @@
       background: rgba(253, 251, 247, 0.88); /* Cream tint for readability */
       backdrop-filter: blur(4px);
     }
-
+    /* Make the content section cards reveal the clear background */
+    .content-section .section-card {
+      background: rgba(255, 255, 255, 0.75); /* Semi-transparent background so the clear image shows */
+      backdrop-filter: blur(0px);            /* Resets any blur effect over the card */
+      -webkit-backdrop-filter: blur(0px);
+    }
     /* Ecosystem Infographics & Placeholder Styling */
     .infographic-grid {
       display: grid;
