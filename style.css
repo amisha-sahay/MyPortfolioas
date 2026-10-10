@@ -243,3 +243,14 @@ body {
     gap: 10px;
   }
 }
+/* --- ECOSYSTEM STUDIES SECTION BACKGROUND --- */
+#ecosystem-studies {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('your-image-filename.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 80vh;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
