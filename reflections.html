@@ -118,6 +118,15 @@
     .accordion-content {
       padding: 20px;
     }
+
+    /* Exclusive Background Image Styling for Ecosystem Studies Content Area */
+    .ecosystem-section-bg {
+      position: relative;
+      background: linear-gradient(rgba(244, 241, 234, 0.90), rgba(244, 241, 234, 0.90)), url('assets/images/est.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -138,7 +147,8 @@
   <main style="max-width: 1100px; margin: 20px auto; padding: 0 15px;">
     <details class="subject-accordion" open>
       <summary>🌱 Ecosystem Studies (EST 1101) - Reflections</summary>
-      <div class="accordion-content"> 
+      <!-- Ecosystem background applied exclusively to the accordion content wrapper -->
+      <div class="accordion-content ecosystem-section-bg"> 
      
         <!-- Hero Section -->
         <section class="hero-section" id="home">
@@ -299,16 +309,15 @@
               <div class="info-card"><div class="info-icon">🌱</div><strong>Supporting</strong></div>
               <div class="info-card"><div class="info-icon">🏞️</div><strong>Cultural</strong></div>
             </div>
-            <p>On our field visit, we did an assessment on the Ecosystem Services provided by the biotic and abiotic elements of the nature. The chart below shows the sub-categories into which the ecosystem services are divided which helped us to further divide the services provided by the elements.</p>
-         <!-- Ecosystem Services Intro Text -->
-      <p style="margin-top: 15px; font-size: 1.05rem; line-height: 1.7;">
-        On our field visit we also collected data on different ecosystem services provided to us by different biotic and abiotic elements of nature and the chart below helped us to sub-categorize it according to the specific service provided by the mentioned natural element.
-      </p>
-      <!-- Ecosystem Services Assessment Image Box -->
-      <div class="media-placeholder" style="padding: 10px; text-align: center;">
-        <img src="assets/images/esta.jpeg" width="50%" alt="Ecosystem Services Assessment" style="border-radius: 8px; display: inline-block;" />
-      </div>
-    </div>
+            
+            <p style="margin-top: 15px; font-size: 1.05rem; line-height: 1.7;">
+              On our field visit we also collected data on different ecosystem services provided to us by different biotic and abiotic elements of nature and the chart below helped us to sub-categorize it according to the specific service provided by the mentioned natural element.
+            </p>
+            
+            <div class="media-placeholder" style="padding: 10px; text-align: center;">
+              <img src="assets/images/esta.jpeg" width="50%" alt="Ecosystem Services Assessment" style="border-radius: 8px; display: inline-block;" />
+            </div>
+          </div>
         </section>
 
         <!-- Section 9: SDG 15 Alignment -->
@@ -316,9 +325,9 @@
           <div class="section-card">
             <div class="sdg-badge">SDG 15: Life on Land</div>
             <h2>9. Alignment with Sustainable Development Goals</h2>
-            <p>Connecting coursework directly to international conservation mandates. The SDGs related to our course are:
-  <strong>SDG 15 (Life on Land):</strong> It directly focuses on halting biodiversity loss, protecting terrestrial habitats, and ensuring the sustainable management and restoration of ecosystems.
-  <strong>SDG 13 (Climate Action):</strong>It highlights the essential role of healthy forest and wetland ecosystems in capturing carbon and mitigating global climate change. (Targets 15.1 and 15.5).</p>
+            <p>Connecting coursework directly to international conservation mandates. The SDGs related to our course are:</p>
+            <p><strong>SDG 15 (Life on Land):</strong> It directly focuses on halting biodiversity loss, protecting terrestrial habitats, and ensuring the sustainable management and restoration of ecosystems.</p>
+            <p><strong>SDG 13 (Climate Action):</strong> It highlights the essential role of healthy forest and wetland ecosystems in capturing carbon and mitigating global climate change. (Targets 15.1 and 15.5).</p>
           </div>
         </section>
 
